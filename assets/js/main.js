@@ -8,8 +8,9 @@ let power = localStorage.getItem('power');
 let count = localStorage.getItem('count')
 let tg = window.Telegram.WebApp;
 
+
 if(coins == null){
-    localStorage.setItem('coins' , tg.initDataUnsafe.user.id);
+    localStorage.setItem('coins' , '0');
     h1.textContent = '0';
 }else{
     h1.textContent = Number(coins).toLocaleString();
