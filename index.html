@@ -81,10 +81,14 @@
 
     <script src="./assets/js/main.js"></script>
     <script>
-        let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
+        let tg = window.Telegram.WebApp; // Получаем объект webapp телеграма
         let usercard = document.querySelector(".squad-container .login .login-detail .user-data .name");
-        usercard.inner = `${tg.initDataUnsafe.user.first_name}`;
-        usercard.textContent(profName); 
+        if (tg.initDataUnsafe && tg.initDataUnsafe.user) {
+            let firstName = tg.initDataUnsafe.user.first_name;
+            usercard.textContent = firstName; // Изменяем текстовое содержимое элемента
+        } else {
+            console.error("Telegram initDataUnsafe или пользовательские данные не доступны.");
+        }
      </script>
 </body>
 </html>
