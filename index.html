@@ -84,7 +84,7 @@
         let tg = window.Telegram.WebApp; // Получаем объект webapp телеграма
         let usercard = document.querySelector(".squad-container .login .login-detail .user-data .name");
         if (tg.initDataUnsafe && tg.initDataUnsafe.user) {
-            let firstName = tg.initDataUnsafe.user.first_name;
+            let firstName = tg.initDataUnsafe.user.username;
             usercard.textContent = firstName; // Изменяем текстовое содержимое элемента
         } else {
             console.error("Telegram initDataUnsafe или пользовательские данные не доступны.");
