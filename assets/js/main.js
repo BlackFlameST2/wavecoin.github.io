@@ -6,7 +6,8 @@ let coins = localStorage.getItem('coins');
 let total = localStorage.getItem('total');
 let power = localStorage.getItem('power');
 let count = localStorage.getItem('count')
-let tg = window.Telegram.WebApp;
+
+
 
 
 if(coins == null){
