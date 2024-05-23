@@ -12,7 +12,22 @@
 
 </head>
 <body>
-    <div id="usercard">
+
+    
+    <div class="squad-container">
+        <div class="login">
+            <div class="login-detail">
+                <div class="profile">
+                    <span>?</span>
+                </div>
+
+                <div class="user-data">
+                    <span class="name">Default</span>
+                    <span class="user-rank">No rank</span>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="coin-count-container">
@@ -67,8 +82,7 @@
     <script src="./assets/js/main.js"></script>
     <script>
         let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
-        let usercard = document.getElementById("usercard"); //получаем блок usercard 
-     
+        let usercard = document.querySelector("#username .name"); //получаем блок usercard 
         let profName = document.createElement('p'); //создаем параграф
         profName.innerText = `${tg.initDataUnsafe.user.first_name}
         ${tg.initDataUnsafe.user.last_name}
