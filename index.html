@@ -82,7 +82,7 @@
     <script src="./assets/js/main.js"></script>
     <script>
         let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
-        let usercard = document.querySelector("#username .name"); //получаем блок usercard 
+        let usercard = document.getElementsByClassName("name"); //получаем блок usercard 
         let profName = document.createElement('p'); //создаем параграф
         profName.innerText = `${tg.initDataUnsafe.user.first_name}
         ${tg.initDataUnsafe.user.last_name}
